@@ -24,3 +24,8 @@ updates:
     directory: "12196"
     schedule:
       interval: "weekly"
+  
+  - package-ecosystem: "uv"
+    directory: "12788"
+    schedule:
+      interval: "weekly"
