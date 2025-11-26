@@ -19,3 +19,8 @@ updates:
         update-types:
           - "minor"
           - "patch"
+          
+  - package-ecosystem: "uv"
+    directory: "12196"
+    schedule:
+      interval: "weekly"
