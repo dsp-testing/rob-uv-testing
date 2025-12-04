@@ -33,5 +33,8 @@ updates:
   - package-ecosystem: "uv"
     directory: "13707"
     versioning-strategy: increase-if-necessary
+    ignore: 
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     schedule:
       interval: "weekly"
