@@ -38,3 +38,35 @@ updates:
         update-types: ["version-update:semver-patch", "version-update:semver-minor"]
     schedule:
       interval: "weekly"
+
+  - package-ecosystem: "uv"
+    directory: "/13426"
+    schedule:
+      interval: "weekly"
+    groups:
+      security-dependencies:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
+      production-dependencies:
+        exclude-patterns:
+          - "beautifulsoup4"
+          - "ipykernel"
+          - "lxml"
+          - "pandas-ods-reader"
+          - "playwright*"
+          - "pyflakes"
+          - "pytest*"
+          - "ruff"
+          - "tox*"
+      development-dependencies:
+        patterns:
+          - "beautifulsoup4"
+          - "ipykernel"
+          - "lxml"
+          - "pandas-ods-reader"
+          - "playwright*"
+          - "pyflakes"
+          - "pytest*"
+          - "ruff"
+          - "tox*"
