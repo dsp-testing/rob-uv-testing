@@ -70,3 +70,17 @@ updates:
           - "pytest*"
           - "ruff"
           - "tox*"
+  - package-ecosystem: uv
+    schedule:
+      interval: weekly
+      day: "thursday"
+      time: "14:00"
+    commit-message:
+      prefix: '(test-repo) '
+    insecure-external-code-execution: allow
+    directory: /13773
+    open-pull-requests-limit: 1
+    patterns: ["*"]
+    groups:
+      all-updates:
+        patterns: ["*"]
