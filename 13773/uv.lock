@@ -1,0 +1,28 @@
+[project]
+dynamic = ["version"]
+name = "test-repo"
+requires-python = ">=3.13,<3.14"
+dependencies = ["ruamel.yaml==0.17.38"]
+
+[dependency-groups]
+test = []
+
+[tool.uv]
+default-groups = ["test"]
+
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "deployment*"]
+
+[tool.setuptools_scm]
+root = "../../" # to the .git folder, relative to this pyproject.toml file
+fallback_version = "0.0.0" # to make dependabot work
+
+# Make sure to update the two commands below with the name of your package
+# Note: you have to use single quoted strings in TOML for regular expressions
+tag_regex = 'fake_api_gateway-v(?P<version>\d+(?:\.\d+){0,2}[^\+]+)(?:\+.*)?$'
+git_describe_command = "git describe --dirty --tags --long --match 'fake_api_gateway-v*'"
