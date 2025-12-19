@@ -23,8 +23,13 @@ updates:
   - package-ecosystem: "uv"
     directory: "12196"
     schedule:
-      interval: "weekly"
-  
+      interval: "daily"
+    open-pull-requests-limit: 16
+    rebase-strategy: "disabled"
+    pull-request-branch-name:
+      # so it's compatible with docker tags
+      separator: "-"
+    
   - package-ecosystem: "uv"
     directory: "12788"
     schedule:
