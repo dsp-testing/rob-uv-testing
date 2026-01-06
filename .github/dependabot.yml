@@ -89,3 +89,9 @@ updates:
     groups:
       all-updates:
         patterns: ["*"]
+
+  - package-ecosystem: uv
+    schedule: 
+      interval: daily
+    directory: /3655848831
+    
