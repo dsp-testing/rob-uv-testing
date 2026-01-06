@@ -95,4 +95,7 @@ updates:
       interval: daily
     directory: /3655848831
 
-    
+  - package-ecosystem: uv
+    schedule: 
+      interval: daily
+    directory: /3655848831-2
