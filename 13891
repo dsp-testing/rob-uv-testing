@@ -1,0 +1,18 @@
+[project]
+name = "AccountCodingV2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.11.14"
+dependencies = [
+    "pandas~=2.1.0",
+    "numpy~=2.2.6",
+    "python-dateutil~=2.9.0",
+    "openpyxl~=3.0.10",
+    "tqdm~=4.67.1",
+    "oracledb~=3.4.1",
+    "sqlalchemy~=2.0.41",
+    "polars~=1.36.1",
+    "pypandoc~=1.15",
+    "ofsconnect @ file:///G:/Analytics%20Unit/Internal%20Packages/OFS%20Connect",
+]
