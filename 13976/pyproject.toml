@@ -1,0 +1,49 @@
+[project]
+dynamic = ["version"]
+name = "test-repo"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "boto3~=1.42.9",
+    "aws-lambda-powertools[tracer]~=3.23.0",
+    "pandas~=2.3.3",
+    "pydantic~=2.12.5",
+    "pydantic-settings~=2.12.0",
+    "boto3~=1.42.0",
+]
+
+[dependency-groups]
+test = [
+    "types-boto3~=1.42.9",
+    "ruff~=0.14.7",
+    "assertpy~=1.1",
+    "freezegun~=1.5.5",
+    "moto[server]~=5.1.17",
+    "pytest~=8.4.2",
+    "pytest-cov~=5.0.0",
+    "pytest-mock~=3.15.1",
+    "pytest-env~=1.2.0",
+    "cfn-lint~=1.42.0",
+    "typer~=0.20.0",
+    "rich~=13.9.4",
+    "dictdiffer~=0.9.0",
+    "httpx~=0.28.1",
+    "python-dotenv~=1.2.1",
+]
+
+[tool.uv]
+default-groups = ["test"]
+
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "deployment*"]
+
+[tool.setuptools_scm]
+root = "../../" # to the .git folder, relative to this pyproject.toml file
+fallback_version = "0.0.0" # to make dependabot work
+
+tag_regex = 'test_repo-v(?P<version>\d+(?:\.\d+){0,2}[^\+]+)(?:\+.*)?$'
+git_describe_command = "git describe --dirty --tags --long --match 'test_repo-v*'"
