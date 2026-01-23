@@ -99,3 +99,18 @@ updates:
     schedule: 
       interval: daily
     directory: /13891-1
+
+  - package-ecosystem: uv
+    schedule:
+      interval: weekly
+      day: "thursday"
+      time: "14:02"
+    commit-message:
+      prefix: '(test-repo) '
+    insecure-external-code-execution: allow
+    directory: /13976
+    open-pull-requests-limit: 1
+    patterns: ["*"]
+    groups:
+      all-updates:
+        patterns: ["*"]
