@@ -1,0 +1,86 @@
+[project]
+name = "ms-fde-root"
+version = "0.0.0"
+description = "Microsoft FDE uv workspace root"
+requires-python = "==3.12.*"
+
+[dependency-groups]
+dev = [
+    "debugpy>=1.8.17",
+]
+
+[tool.uv]
+required-version = ">=0.9.5"
+
+[tool.uv.workspace]
+members = [
+    "common/libs/*",
+    "common/apps/*",
+]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # flake8-tidy-imports
+    "TID",
+    # Pylint - import rules
+    "PLC0415",
+]
+
+[tool.ruff.lint.isort]
+# Forcing every import to be on its own line makes diffs involving import changes easier to read.
+force-single-line = true
+
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "local-folder",
+    "first-party",
+]
+
+# Libs should be namespaced under "ms":
+# ms.<tenant>.<lib>
+# For example:
+# - ms.tenant1.models
+# - ms.tenant2.models
+# - ms.common.caching
+known-local-folder = [
+    "ms",
+]
+
+known-first-party = [
+    "src",
+]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.ruff.lint.flake8-tidy-imports]
+# Disallow all relative imports.
+ban-relative-imports = "all"
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+# Prevent usage of HTTPException from fastapi in all projects
+"fastapi.HTTPException".msg = "do not import HTTPException from fastapi. Use exception middleware from ms-common-fastapi to manage HTTP errors."
+
+# Prevent from __future__ import annotations
+"__future__.annotations".msg = "do not use 'from __future__ import annotations'"
+
+# Prevent direct usage of pydantic.BaseModel
+"pydantic.BaseModel".msg = "do not use pydantic.BaseModel directly. use FrozenBaseModel instead."
