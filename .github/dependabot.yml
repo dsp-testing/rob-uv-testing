@@ -101,6 +101,11 @@ updates:
     directory: /13891-1
 
   - package-ecosystem: uv
+    schedule: 
+      interval: daily
+    directory: /py
+
+  - package-ecosystem: uv
     schedule:
       interval: weekly
       day: "thursday"
