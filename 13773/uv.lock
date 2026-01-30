@@ -4,11 +4,11 @@ requires-python = "==3.13.*"
 
 [[package]]
 name = "ruamel-yaml"
-version = "0.17.38"
+version = "0.19.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/cc/7f/227b5acc72eea42fa44186d46a0f4e10850a03a05e8167d4dd57589101d9/ruamel.yaml-0.17.38.tar.gz", hash = "sha256:a1d740449e96e9a43330f0b8448dc206d090fc9d10a384be68275ac18e0bc9ae", size = 136420, upload-time = "2023-10-19T13:36:06.361Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c7/3b/ebda527b56beb90cb7652cb1c7e4f91f48649fbcd8d2eb2fb6e77cd3329b/ruamel_yaml-0.19.1.tar.gz", hash = "sha256:53eb66cd27849eff968ebf8f0bf61f46cdac2da1d1f3576dd4ccee9b25c31993", size = 142709, upload-time = "2026-01-02T16:50:31.84Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1f/cb/415b5ff8179a342aa87941f651d4571494560e7a67fb286243512f29d644/ruamel.yaml-0.17.38-py3-none-any.whl", hash = "sha256:c29d92cd41897d3a4d74c69e5014955c08f8e7aef49fb35c2215993db057c0e0", size = 113198, upload-time = "2023-10-19T13:36:02.997Z" },
+    { url = "https://files.pythonhosted.org/packages/b8/0c/51f6841f1d84f404f92463fc2b1ba0da357ca1e3db6b7fbda26956c3b82a/ruamel_yaml-0.19.1-py3-none-any.whl", hash = "sha256:27592957fedf6e0b62f281e96effd28043345e0e66001f97683aa9a40c667c93", size = 118102, upload-time = "2026-01-02T16:50:29.201Z" },
 ]
 
 [[package]]
@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "ruamel-yaml", specifier = "==0.17.38" }]
+requires-dist = [{ name = "ruamel-yaml", specifier = "==0.19.1" }]
 
 [package.metadata.requires-dev]
 test = []
