@@ -2,7 +2,7 @@
 dynamic = ["version"]
 name = "test-repo"
 requires-python = ">=3.13,<3.14"
-dependencies = ["ruamel.yaml==0.17.38"]
+dependencies = ["ruamel.yaml==0.19.1"]
 
 [dependency-groups]
 test = []
