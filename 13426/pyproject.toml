@@ -42,7 +42,7 @@ dependencies = [
     "motor==3.7.1", # required by quart-session
     "pycountry==24.6.1",
     "pydantic-extra-types==2.10.6",
-    "pymongo==4.15.3",
+    "pymongo==4.18.3",
     "python-dotenv==1.1.1",
     "python-multipart==0.0.20",
     "rcssmin==1.2.2",
